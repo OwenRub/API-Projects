@@ -1,0 +1,324 @@
+/*  ----  GENERAL  ----  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+:root{
+	--main-blue: #1d1452;
+	--main-dark: /*#2C1E7B*/#483d87;
+	--complementary: #B4CB34;
+	--text-gray: #696A72;
+	--analogous: #9835CD;
+}
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+	box-sizing: border-box;
+}
+.container{
+	width: 1300px;
+	margin: 0 auto;
+}
+
+/*  ----  NAVIGATION BAR  ----  */
+nav{
+    background-color: var(--main-blue);
+}
+.nav_bar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 54px;
+}
+.nav_bar #search-icon{
+	color: var(--complementary);
+	font-size: 24px;
+	cursor: pointer;
+}
+.links a{
+	color: white;
+	padding: 10px;
+	text-decoration: none;
+	border-radius: 3px;
+}
+.links a:hover{
+	background-color: var(--main-dark);
+}
+.logo{
+	padding: 10px;
+}
+.logo a{
+ 	background: -webkit-linear-gradient(45deg, #B4CB34, #9835CD);
+  	-webkit-background-clip: text;
+ 	-webkit-text-fill-color: transparent;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 2rem;
+}
+/*  ----  WELCOME SECTION  ----  */
+.top{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: white;
+	padding: 24px;
+	height: 340px;
+	background-image: linear-gradient(90deg,rgba(83, 32, 110, 0.6),rgba(71, 25, 94, 0.6)), url('https://www.sheknows.com/wp-content/uploads/2020/04/wb4q5wbxqoei74hth8wi.png');
+	background-position: center 20%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.top h1{
+	font-size: 2.7rem;
+	margin-bottom: 15px;
+}
+.top div{
+	margin-left: 30px;
+}
+.user-ipt{
+	width: 80%;
+	padding: 10px 22px;
+	font-size: 18px;
+	border-radius: 20px;
+	border: none;
+	/*border: 2px solid var(--complementary);*/
+	color: var(--text-gray);
+}
+.user-ipt:focus{
+	outline: none;
+}
+.search-btn{
+	background: linear-gradient(45deg, var(--complementary),var(--analogous));
+	padding: 10px 16px;
+	font-size: 18px;
+	border-radius: 20px;
+	border: none;
+	color: white;
+	position: relative;
+	right: 50px;
+}
+.search-btn:hover{
+	cursor: pointer;
+	background-color: #66228a;
+}
+/*  ----  ITEMS SECTIONS  ----  */
+.items-section{
+	padding: 16px;
+}
+.items-section .section-title{
+	font-size: 1.3rem;
+	margin: 0 0 20px 36px;
+}
+.items-container{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(5, 1fr);
+}
+.item{
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.content-img{
+	width: 95%;
+	object-fit: cover;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-height: 315px;
+}
+.content-img img{
+	align-self: center;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 10px;
+}
+.content-img h5{
+	position: absolute;
+	right: 15px; bottom: 20px;
+	border-radius: 14px;
+	padding: 4px 6px;
+	color: white;
+	background-color: var(--analogous);
+}
+.content-img h6{
+	position: absolute;
+	bottom: -10px; left: 16px;
+	border-radius: 50%;
+	padding: 10px;
+	font-size: 13px;
+	font-weight: 500;
+	background-color: #3d3d3d;
+	color: white;
+	font-weight: 700;	
+	border: 1px solid var(--analogous);
+}
+.item p{
+	margin-top: 10px;
+}
+.item:hover .content-img::before{
+	content: 'View details';
+	text-align: center;
+	z-index: 2;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: white;
+}
+.item:hover img{
+	filter: brightness(72%);
+}
+.item:hover p{
+	color: var(--analogous);
+}
+
+/*  ----  SEARCH IN NAV BAR  ----  */
+.secondary-input{
+	width: 100%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	/*border: 2px solid var(--complementary);*/
+	color: var(--text-gray);
+}
+.secondary-input:focus{
+	outline: none;
+}
+.view-more-button{
+	margin: 20px 0;
+	position: relative;
+	font-size: 18px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	background: #1d1452;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.view-more-button:hover{
+	background: #9835CD;
+}
+
+/*  ----  DETAILS PAGE  ----  */
+#information-container{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.tuexperto.com/wp-content/uploads/2022/01/paginas-descargar-fondos-de-pantalla.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.image-container{
+	width: 300px;
+	height: 450px;
+	transform: translateY(100%);
+	animation: enter-bottom 500ms ease-in forwards;
+	opacity: 0.4;
+}
+.info{
+	overflow: hidden;
+	padding: 25px 0;
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	grid-column-gap: 20px;
+}
+.image-container img{
+	width: 100%;
+	border-radius: 20px;
+}
+.text-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	transform: translateX(100%);
+	opacity: 0.4;
+	animation: enter-right 500ms ease-in forwards;
+}
+.text-container > *{
+	margin-bottom: 20px;
+}
+.text-container h1{
+	font-size: 2rem;
+}
+.text-container span {
+	font-weight: 400;
+	color: #ededed;
+}
+.rate{
+	display: flex;
+	align-items: center;
+}
+.text-container .rate h3{
+	margin-right: 20px;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #6f7d1f;
+	border-radius: 50%;
+}
+#seasons h1{
+	margin: 20px 40px;
+}
+.season{
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+}
+.season img{
+	height: 180px;
+	width: auto;
+	margin-right: 30px;
+	border-radius: 10px 0 0 10px;
+}
+.season div p{
+	margin-top: 15px;
+}
+/*  ----  FOOTER  ----  */
+.bottom-info{
+	text-align: center;
+	color: white;
+	background-color: var(--main-blue);
+	padding: 15px 0;
+}
+.bottom-info a{
+	color: var(--complementary);
+	text-decoration: none;
+}
+.bottom-info p{
+	margin-bottom: 8px;
+}
+
+/*  ----  ANIMATIONS  ----  */
+@keyframes enter-bottom{
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes enter-right{
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1300px){
+	.container{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 680px){
+	.user-ipt{
+		width: 70%;
+	}
+	.card{
+		height: auto;
+	}
+}

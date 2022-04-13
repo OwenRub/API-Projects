@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Search results - Movie Finder</title>
+</head>
+<body>
+	<!-- NAVIGATION BAR -->
+	<nav>
+		<div class="nav_bar container">
+			<div class="logo">
+				<a href="index.html">Movie Finder</a>
+			</div>
+			<div class="links">
+				<a href="top_movies.html">Top movies</a>
+				<a href="top_series.html">Top series</a>
+				<a href="premiere_movies.html">Premiere movies</a>
+				<a href="ontv_series.html">On TV series</a>
+			</div>
+			<div>
+				<form action="results.html" method="GET" id="search-form">
+					<input class="secondary-input" type="text" id="user-input" name="search" placeholder="Search movie or show">
+				</form>
+			</div>
+	</nav>
+	<!-- WELCOME SECTION -->
+	<main>
+		<section id="movies-results" class="items-section container">
+			<div class="section-title">
+				<h3>Movies results</h3>
+			</div>
+			<div class="items-container">
+				
+			</div>
+		</section>
+		<section id="series-results" class="items-section container">
+			<div class="section-title">
+				<h3>Series results</h3>
+			</div>
+			<div class="items-container">
+				
+			</div>
+		</section>
+	</main>
+	<footer class="bottom-info">
+		<p>This project makes use of the API provided by <a href="https://www.themoviedb.org/"><i>TheMovieDataBase (TMDB).</i></a></p>
+		<p>No video material is stored or distributed in this website.</p>
+		<p>It's main objective is to access information about movies and shows.</p>
+		<p>Coded by: <a href="https://github.com/OwenRub">Owen Rubio</a></p>
+	</footer>
+	<script type="module" src="js/results.js"></script>
+</body>
+</html>

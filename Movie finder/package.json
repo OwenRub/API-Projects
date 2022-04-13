@@ -1,0 +1,21 @@
+{
+  "name": "movie-finder",
+  "version": "1.0.0",
+  "description": "app to look for movies and series information",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "movies",
+    "series",
+    "rating"
+  ],
+  "author": "Owen Rubio",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3"
+  }
+}

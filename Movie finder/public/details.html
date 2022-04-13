@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Details</title>
+</head>
+<body>
+	<!-- NAVIGATION BAR -->
+	<nav>
+		<div class="nav_bar container">
+			<div class="logo">
+				<a href="index.html">Movie Finder</a>
+			</div>
+			<div class="links">
+				<a href="top_movies.html">Top movies</a>
+				<a href="top_series.html">Top series</a>
+				<a href="premiere_movies.html">Premiere movies</a>
+				<a href="ontv_series.html">On TV series</a>
+			</div>
+			<div>
+				<form action="results.html" method="GET" id="search-form">
+					<input class="secondary-input" type="text" id="user-input" name="search" placeholder="Search movie or show">
+				</form>
+			</div>
+	</nav>
+	<main>
+		<section id="information-container">
+			<div class="container info">
+				<div class="image-container">
+					<img id="back" src="">
+				</div>
+				<div class="text-container">
+					<div>
+						<h1 id="title"></h1>
+						<p id="genres"></p>
+					</div>
+					<div class="rate">
+						<h3 id="rate"></h3>
+						<h4>Vote average</h4>
+					</div>
+					<h3>Description</h3>
+					<p id="description"></p>
+					<div id="creator-holder">
+						<p id="creator"></p>
+						<h4>Created by</h4>
+					</div>
+					<i id="tagline"></i>
+				</div>
+			</div>
+		</section>
+		<section id="seasons" class="container">
+			<h1>Seasons</h1>
+			
+		</section>
+	</main>
+	<script type="module" src="js/details.js"></script>
+</body>
+</html>
