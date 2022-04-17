@@ -1,0 +1,19 @@
+{
+  "name": "marvel-universe",
+  "version": "1.0.0",
+  "description": "Look for your favourite hero/story/comic/event in the marvel universe, by Owen Rubio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "marvel",
+    "comics",
+    "hero"
+  ],
+  "author": "Owen Rubio",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
