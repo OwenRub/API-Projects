@@ -6,21 +6,23 @@
   <meta name="description" content="Look for your favourite hero/story/comic/event in the marvel universe, by Owen Rubio">
   <meta name="keywords" content="marvel, comics, hero, avengers">
   <meta name="author" content="Owen Rubio">
-  <link rel="icon" href="../assets/marvel-icon.png">
   <!-- UNICONS -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <!-- STYLES -->
-  <link rel="stylesheet" type="text/css" href="css/global.css">
+  <link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" type="image/png" href="assets/marvel-icon.png" sizes="24x24">
   <title>Marvel universe</title>
 </head>
 <body>
+	<!-- NAVBAR -->
 	<header style="background-color: #000000;">
 	  <nav class="container">
 	  	<div class="nav-logo">
-	  	  <a href="/public/index.html"><img src="../assets/marvel-icon.png"></a>
-	  	  <i class="uil uil-bars"></i>
+	  	  <a href="/public/index.html"><img src="assets/marvel-icon.png"></a>
+	  	  <i id="toggle-menu" class="uil uil-bars"></i>
 	  	</div>
-	  	<div class="links">
+	  	<div id="menu-links" class="links">
 	  	  <ul>
 	  		<li><a href="">Characters</a></li>
 	  		<li><a href="">Comics</a></li>
@@ -34,8 +36,43 @@
 	  	</div>
 	  </nav>
 	</header>
-
-
+	<main>
+		<!-- SLIDER -->
+		<section class="container slider-container">
+			<div class="slider">
+				<div class="slide" id="slide4">
+					<div class="text">
+						<p class="slide-title">Events</p>
+						<p class="slide-description">Big, universe-altering storylines</p>
+						<a href="" class="slide-btn">See more</a>
+					</div>
+				</div>
+				<div class="slide" id="slide1">
+					<div class="text">
+						<p class="slide-title">Characters</p>
+						<p class="slide-description">Know all about your favourite <a href="https://www.marvel.com/" target="_blank">Marvel</a> characters</p>
+						<a href="" class="slide-btn">See more</a>
+					</div>
+				</div>
+				<div class="slide" id="slide2">
+					<div class="text">
+						<p class="slide-title">Comics</p>
+						<p class="slide-description">Take a look at your favourite comic</p>
+						<a href="" class="slide-btn">See more</a>
+					</div>
+				</div>
+				<div class="slide" id="slide3">
+					<div class="text">
+						<p class="slide-title">Stories</p>
+						<p class="slide-description">Indivisible, reusable components for comics</p>
+						<a href="" class="slide-btn">See more</a>
+					</div>
+				</div>
+			</div>
+			<button id="left-arrow"><i class="uil uil-angle-left-b"></i></button>
+			<button id="right-arrow"><i class="uil uil-angle-right-b"></i></button>
+		</section>
+	</main>
 	<script src="js/app.js"></script>
 </body>
 </html>

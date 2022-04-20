@@ -1,4 +1,4 @@
-  GENERAL  */
+/*  GENERAL  */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 :root{
 	--clr-black: #000000;
@@ -6,6 +6,7 @@
 	--clr-orange: #f78f3f;
 	--clr-blue: #518cca;
 	--clr-gray: #504a4a;
+	--clr-blue-dark: #325880;
 }
 body{
 	font-family: 'Plus Jakarta Sans', sans-serif;
@@ -27,6 +28,7 @@ nav{
 /* color white en nav */
 nav i{
 	color: white;
+	cursor: pointer;
 }
 .nav-logo{
 	height: 100%;
@@ -47,10 +49,18 @@ nav i{
 .links{
 	position: absolute;
 	top: 60px;
-	transform: translateX(0); /**/
-	background: white; /**/
+	transform: translateX(-100%); /**/
+	background: linear-gradient(rgba(74, 76, 80,0.6),rgba(74, 76, 80,0.6)), url('../assets/nav-background.jpg'); 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
 	height: 100vh;
+	transition: transform 300ms;
+	z-index: 20;
+}
+.show{
+	transform: translateX(0);
 }
 .links ul{
 	list-style: none;
@@ -63,15 +73,27 @@ nav i{
 }
 .links ul li a{
 	text-decoration: none;
-	color: var(--clr-gray);
+	color: white;
+	font-weight: 600;
 }
 .nav-search{
 	display: none;
+}
+.search-btn{
+	color: white;
+	background: var(--clr-blue);
+	padding: 10px 14px;
+	border:none; cursor: pointer;
+	font-size: 0.9rem;
+}
+.search-btn:hover{
+	background: var(--clr-blue-dark);
 }
 
 @media screen and (min-width: 550px){
 	.links{
 		width: 360px;
+		background-position: center;
 	}
 }
 
@@ -89,6 +111,7 @@ nav i{
 		height: 100%;
 		width: auto;
 		flex-grow: 1;
+		transform: translateX(0);
 	}
 	.links ul{
 		padding: 0;  /**/
@@ -98,7 +121,7 @@ nav i{
 		height: 100%;
 	}
 	.links ul li {
-		margin: 0 10px; padding: 0; /**/
+		margin: 0 16px; padding: 0; /**/
 		font-size: 1.1rem;
 	}
 	.nav-logo i, .links ul li:last-child{
@@ -106,4 +129,3 @@ nav i{
 	}
 
 }
-/*  SLIDER SECTION  
