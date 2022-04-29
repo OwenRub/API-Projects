@@ -1,0 +1,354 @@
+/*   SLIDER SECTION  */
+.slider-container{
+  height: 400px; 
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.slider{
+  height: 100%; width: 400%;
+  display: flex;
+  margin-left: -100%;
+}
+#left-arrow, #right-arrow{
+  position: absolute;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#left-arrow:hover, #right-arrow:hover{
+  background: rgba(255,255,255,0.7) ;
+}
+#left-arrow{
+  top: 50%; left: 3px;
+}
+#right-arrow{
+  top: 50%; right: 3px;
+}
+/*  SLIDER TEXT   */
+.slide{
+  height: 100%; width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text{
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  background:white;
+  padding: 30px 10px;
+}
+.slide-title{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.slide-description{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.slide-description a{
+  text-decoration: none;
+  color: var(--clr-red);
+}
+.slide-description a:hover{
+  color: black;
+}
+/*  SLIDER BUTTON  */
+.slide-btn{
+  text-decoration: none;
+  font-size: 1rem;
+  background: rgba(0,0,0, 0);
+  width: 80px; height: 35px;
+  border: none;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.slide-btn::after{
+  content: '';
+  position: absolute;
+  width: 100px; height: 45px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) skewX(-20deg);
+  background: var(--clr-red);
+  z-index: -1;
+}
+.slide-btn:hover::after{
+  /* transform: translate(-50%, -50%) skewX(20deg); */
+  background: var(--clr-black);
+}
+@media screen and (min-width: 550px){
+  .text{
+    width: 60%;
+    margin: 0 0 0 50px;
+  }
+  #left-arrow, #right-arrow{
+    font-size: 2.5rem;
+  }
+  #left-arrow:hover, #right-arrow:hover{
+    background: rgba(255,255,255,0.7);
+  }
+  #left-arrow{
+    left: 8px;
+  }
+  #right-arrow{
+    right: 8px;
+  }
+}
+@media screen and (min-width: 800px){
+  .text{
+    width: 50%;
+    margin: 0 0 0 60px;
+  }
+}
+/*  SLIDES  */
+#slide1{
+  background-image: url('../assets/background-slide1.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+#slide2{
+  background-image: url('../assets/background-slide2.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#slide3{
+  background-image: url('../assets/background-slide3.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#slide4{
+  background-image: url('../assets/background-slide4.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*   LATEST NEWS  */
+.latest{
+  padding: 4px 10px;
+  margin-top: 20px;
+}
+.latest h2{
+  margin-bottom: 20px;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 15px 0;
+}
+article img{
+  width: 100%;
+}
+article a:first-child{
+  margin-bottom: 10px;
+}
+p.new-source, p.new-date{
+  color: var(--clr-gray);
+  font-weight: 500;
+}
+p.new-date{
+  font-size: 14px;
+}
+.new-link{
+  text-decoration: none;
+  color: var(--clr-black);
+}
+.new-link h3{
+  margin: 5px 0;
+}
+.new-link:hover, article img:hover .new-link{
+  color: var(--clr-red);
+}
+@media screen and (min-width: 600px){
+  article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  article a:first-child{
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 950px){
+  .latest-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  hr{
+    display: none;
+  }
+}
+/*   ABOUT MARVEL   */
+.about-marvel{
+  background: var(--clr-black);
+  margin: 20px 0;
+  padding: 35px 10px 45px 10px;
+}
+.about-marvel h2{
+  color: white;
+  margin-bottom: 24px;
+}
+.tab-buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 15px;
+}
+.tab-buttons button{
+  padding: 5px 0;
+  font-size: 16px;
+  border: 1px solid white; color: white;
+  background-color: var(--clr-black);
+  cursor: pointer;
+  position: relative; bottom: 0;
+  transition: transform 200ms;
+  transition: background-color 300ms;
+}
+.tab-buttons button:nth-child(2){
+  margin-left: 2px; margin-right: 2px;
+}
+button.selected {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
+}
+.tab{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab div{
+  padding: 3px;
+  width: 100%;
+}
+.tab img{
+  width: 100%;
+  object-fit: cover;
+}
+.tab p{
+  text-align: justify;
+}
+.hide{
+  display: none;
+}
+
+@media screen and (min-width: 550px){
+  .tab{
+    height: 360px;
+  }
+  .tab div:first-child{
+    display: none;
+  }
+  .tab div:last-child{
+    width: 50%;
+    margin: auto;
+    margin-right: 10px;
+  }
+  #origin{
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.1),rgba(0,0,0,0.7),rgba(0,0,0,0.9),rgba(0,0,0,1),rgba(0,0,0,1)), url('../assets/marvel-comics-logo.png');
+    background-position: left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  #stan-lee{
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.1),rgba(0,0,0,0.7),rgba(0,0,0,0.9),rgba(0,0,0,1)), url('../assets/stan-lee.webp');
+    background-position: left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  #nowadays{
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.1),rgba(0,0,0,0.7),rgba(0,0,0,0.9),rgba(0,0,0,1)), url('../assets/secret-wars.webp');
+    background-position: left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 770px){
+  #origin{
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.1),rgba(0,0,0,1),rgba(0,0,0,1)), url('../assets/marvel-comics-logo.png');
+  }
+  #stan-lee{
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.1),rgba(0,0,0,1),rgba(0,0,0,1)), url('../assets/stan-lee.webp');
+  }
+  #nowadays{
+    background-image: linear-gradient(90deg,rgba(0,0,0,0.1),rgba(0,0,0,1),rgba(0,0,0,1)), url('../assets/secret-wars.webp');
+  }
+}
+/*   BANNER  */
+.banner{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.banner img{
+  width: 100%;
+  max-width: 400px;
+}
+.banner blockquote{
+  font-style: italic;
+  text-align: center;
+}
+@media screen and (min-width: 870px){
+  .banner{
+    flex-direction: row;
+  }
+}
+/*   RELATED LINKS  */
+.related-links{
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+.related-links h2{
+  margin-bottom: 24px;
+}
+.cards-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+}
+.card{
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid var(--clr-black);
+  border-radius: 10px;
+  transition: transform 150ms;
+}
+.card:hover{
+  box-shadow: 2px 2px 3px 2px rgba(50, 50, 50, 0.2);
+  transform: translateY(-3px);
+}
+.card div:first-child{
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+  border-bottom: 1px solid var(--clr-black);
+  border-radius: 9px 9px 0 0;
+  /* background-color: var(--clr-black) !important; */
+}
+.card div:last-child{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-black);
+  padding: 4px;
+}
+@media screen and (min-width: 750px){
+  .cards-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

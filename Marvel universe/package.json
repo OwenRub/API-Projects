@@ -14,6 +14,7 @@
   "author": "Owen Rubio",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.17.3"
   }
 }
