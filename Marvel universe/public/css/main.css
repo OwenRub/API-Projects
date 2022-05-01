@@ -323,7 +323,6 @@ button.selected {
   text-decoration: none;
   text-align: center;
   border: 1px solid var(--clr-black);
-  border-radius: 10px;
   transition: transform 150ms;
 }
 .card:hover{
@@ -336,7 +335,7 @@ button.selected {
   font-weight: 600;
   padding: 5px;
   border-bottom: 1px solid var(--clr-black);
-  border-radius: 9px 9px 0 0;
+  /* border-radius: 9px 9px 0 0; */
   /* background-color: var(--clr-black) !important; */
 }
 .card div:last-child{

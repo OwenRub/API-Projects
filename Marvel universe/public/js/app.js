@@ -5,6 +5,21 @@ toggleButton.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
 
+// toggle go up button
+window.addEventListener('scroll', event => {
+  const scrollHeight = window.pageYOffset;
+  const goTopButton = document.getElementById('go-top-btn');
+
+  goTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      left: 0,
+      top: 0
+    });
+  });
+
+  scrollHeight > 500 ? goTopButton.className = 'show-btn' : goTopButton.className = 'hide-btn';
+});
+
 // SLIDER
 const slider = document.querySelector('.slider');
 const buttonNext = document.getElementById('right-arrow');
@@ -13,7 +28,7 @@ const buttonPrevious = document.getElementById('left-arrow');
 buttonNext.addEventListener('click', goNext);
 buttonPrevious.addEventListener('click', goPrevious);
 
-const myInterval = setInterval(goNext, 3300);
+const myInterval = setInterval(goNext, 3500);
 
 /* slider functions */
 function goNext(){

@@ -17,7 +17,7 @@ app.get('/v1/news/:date',(request, response) => {
 	const formattedFrom = `${from.getFullYear()}-${from.getMonth()+1}-${from.getDate()}`;
 	const formattedTo = `${to.getFullYear()}-${to.getMonth()+1}-${to.getDate()}`;
 
-	axios.get(`https://newsapi.org/v2/everything?q=marvel&from=${formattedFrom}&to=${formattedTo}&sortBy=popularity&apiKey=${here_your_apikey}`)
+	axios.get(`https://newsapi.org/v2/everything?q=marvel&from=${formattedFrom}&to=${formattedTo}&sortBy=popularity&apiKey=7325215550124103af54b0cd95f6aafb`)
 		.then(newsResponse => {
 			response.json(newsResponse.data)
 		})
