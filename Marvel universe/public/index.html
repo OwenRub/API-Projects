@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <!-- STYLES -->
   <link rel="stylesheet" href="css/global.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" type="image/png" href="assets/marvel-icon.png" sizes="24x24">
   <title>Marvel universe</title>
 </head>
@@ -19,20 +19,20 @@
 	<header style="background-color: #000000;">
 	  <nav class="container">
 	  	<div class="nav-logo">
-	  	  <a href="/public/index.html"><img src="assets/marvel-icon.png"></a>
+	  	  <a href=""><img src="assets/marvel-icon.png"></a>
 	  	  <i id="toggle-menu" class="uil uil-bars"></i>
 	  	</div>
 	  	<div id="menu-links" class="links">
 	  	  <ul>
-	  		<li><a href="">Characters</a></li>
-	  		<li><a href="">Comics</a></li>
-	  		<li><a href="">Stories</a></li>
-	  		<li><a href="">Events</a></li>
-	  		<li><button class="search-btn" type="button">Search</button></li>
+	  		<li><a href="characters/">Characters</a></li>
+	  		<li><a href="comics/">Comics</a></li>
+	  		<li><a href="stories/">Stories</a></li>
+	  		<li><a href="events/">Events</a></li>
+	  		<li><a href="search/" id="search-btn">Search</a></li>
 	  	  </ul>
 	  	</div>
 	  	<div class="nav-search">
-	  		<i class="uil uil-search"></i>
+	  		<a href="search/"><i class="uil uil-search"></i></a>
 	  	</div>
 	  </nav>
 	</header>
@@ -51,21 +51,21 @@
 					<div class="text">
 						<p class="slide-title">Characters</p>
 						<p class="slide-description">Know all about your favourite <a href="https://www.marvel.com/" target="_blank">Marvel</a> characters</p>
-						<a href="" class="slide-btn">See more</a>
+						<a href="characters/" class="slide-btn">See more</a>
 					</div>
 				</div>
 				<div class="slide" id="slide2">
 					<div class="text">
 						<p class="slide-title">Comics</p>
 						<p class="slide-description">Take a look at your favourite comic</p>
-						<a href="" class="slide-btn">See more</a>
+						<a href="comics/" class="slide-btn">See more</a>
 					</div>
 				</div>
 				<div class="slide" id="slide3">
 					<div class="text">
 						<p class="slide-title">Stories</p>
 						<p class="slide-description">Indivisible, reusable components for comics</p>
-						<a href="" class="slide-btn">See more</a>
+						<a href="stories/" class="slide-btn">See more</a>
 					</div>
 				</div>
 			</div>
@@ -140,6 +140,7 @@
 			</div>
 		</section>
 	</main>
+	<button class="hide-btn" id="go-top-btn"><i class="uil uil-arrow-up"></i></button>
 	<footer>
 		<div>
 			<img src="assets/marvel-icon.png" alt="marvel icon">

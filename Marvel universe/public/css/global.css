@@ -11,6 +11,9 @@
 body{
 	font-family: 'Plus Jakarta Sans', sans-serif;
 }
+html{
+	scroll-behavior: smooth;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -82,14 +85,14 @@ nav i{
 .nav-search{
 	display: none;
 }
-.search-btn{
+#search-btn{
 	color: white;
 	background: var(--clr-blue);
 	padding: 10px 14px;
 	border:none; cursor: pointer;
 	font-size: 0.9rem;
 }
-.search-btn:hover{
+#search-btn:hover{
 	background: var(--clr-blue-dark);
 }
 
@@ -178,4 +181,19 @@ footer p a{
 		margin-right: 20px;
 		margin-bottom: 0;
 	}
+}
+/*  GO TOP BUTTON  */
+.show-btn{
+	padding: 6px;
+	color: white;
+	background-color: #f78f3f;
+	border: none;
+	position: fixed;
+	bottom: 60px; right: 40px;
+	clip-path: polygon(25% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 25%);
+	font-size: 20px;
+	cursor: pointer;
+}
+.hide-btn{
+	display: none;
 }
