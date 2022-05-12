@@ -3,40 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Look for your favourite hero in the marvel universe, by Owen Rubio">
+  <meta name="description" content="Look for your favourite comics in the marvel universe, by Owen Rubio">
   <meta name="keywords" content="marvel, comics, hero, avengers">
   <meta name="author" content="Owen Rubio">
   <!-- UNICONS -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <!-- STYLES -->
   <link rel="stylesheet" href="../css/global.css">
-	<link rel="stylesheet" href="../css/characters.css">
-	<link rel="icon" type="image/png" href="../assets/marvel-icon.png" sizes="24x24">
-  <title>Marvel universe</title>
+	<link rel="stylesheet" href="comics.css">
+	<link rel="icon" type="image/png" href="../assets/marvel-icon3.png" sizes="24x24">
+  <title>Marvel Comics</title>
 </head>
 <body>
   <!-- NAVBAR -->
 	<header style="background-color: #000000;">
 	  <nav class="container">
 	  	<div class="nav-logo">
-	  	  <a href="../"><img src="../assets/marvel-icon.png"></a>
+	  	  <a href="../"><img src="../assets/marvel-icon2.png"></a>
 	  	  <i id="toggle-menu" class="uil uil-bars"></i>
 	  	</div>
 	  	<div id="menu-links" class="links">
 	  	  <ul>
 	  		<li><a href="../characters/">Characters</a></li>
 	  		<li><a href="../comics/">Comics</a></li>
-	  		<li><a href="../stories/">Stories</a></li>
-	  		<li><a href="../events/">Events</a></li>
+	  		<li><a href="../news/">News</a></li>
 	  		<li><a href="../search/" id="search-btn">Search</a></li>
 	  	  </ul>
 	  	</div>
 	  	<div class="nav-search">
-	  		<a href="../search/"><i class="uil uil-search"></i></a>
+	  		<a href="../search/"><i title="Search" class="uil uil-search"></i></a>
 	  	</div>
 	  </nav>
 	</header>
-  
-  
+	<!-- GO TOP BUTTON -->
+	<button class="hide-btn" id="go-top-btn"><i class="uil uil-arrow-up"></i></button>
+  <main>
+		<!-- TOP BANNER -->
+		<section class="top-banner">
+			<div>
+				<h1>MARVEL COMICS</h1>
+			</div>
+			<div>
+				<p>The latest in Marvel comics</p>
+			</div>
+		</section>
+		<!-- CHARACTERS LIST -->
+		<section class="list-container container">
+			<h2>Latest releases</h2>
+			<div id="latest-comics-container" class="comics-list">
+				<!-- STRUCTURE <a href="#" class="comic-card">
+					<img src="https://i.annihil.us/u/prod/marvel/i/mg/c/03/6268519a2737b/portrait_uncanny.jpg" alt="character">
+					<div class="comic-title">
+						<p>Black panther legends #4</p>
+					</div>
+				</a> -->
+			</div>
+		</section>
+		<section class="list-container container">
+			<h2>Coming soon</h2>
+			<div id="comingsoon-comics-container" class="comics-list">
+				<!-- same structure of cover -->
+			</div>
+		</section>
+	</main>
+	<!-- FOOTER -->
+	<footer>
+		<div>
+			<img src="../assets/marvel-icon2.png" alt="marvel icon">
+			<div>
+				<h4>FIND ME</h4>
+				<div class="media-links">
+					<a target="_blank" href="https://www.linkedin.com/in/owen-developer/"><i class="uil uil-linkedin"></i></a>
+					<a target="_blank" href="https://github.com/OwenRub"><i class="uil uil-github"></i></a>
+					<a target="_blank" href="https://www.facebook.com/owenjavier.rubiogarcia"><i class="uil uil-facebook"></i></a>
+					<a target="_blank" href="https://twitter.com/Owensitux"><i class="uil uil-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+		<p>This website is not for commercial purposes.</p>
+		<p>Data provided by <a href="marvel.com" hreflang="en">Marvel</a>. © 2014 Marvel.</p>
+	</footer>
+	<script src="../js/utilities.js"></script>
+	<script src="comics.js"></script>
 </body>
 </html>
