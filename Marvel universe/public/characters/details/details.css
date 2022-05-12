@@ -1,0 +1,85 @@
+.data-container{
+  background-color: #1c1c1c;
+  color: white;
+}
+.data-container .container{
+  padding: 30px ;
+  display: flex;
+  flex-direction: column;
+}
+.character-image img{
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+.character-data h2{
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+}
+.character-data strong{
+  font-size: 1.2rem;
+}
+.character-data .published{
+  margin-bottom: 30px;
+}
+.urls{
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.urls a{
+  margin-left: 20px; margin-right: 20px;
+  display: block;
+  clip-path: polygon(18% 0%, 100% 0%, 100% 82%, 82% 100%, 0% 100%, 0% 18%);
+  text-decoration: none;
+  background-color: var(--clr-red);
+  color: white;
+  padding: 18px;
+}
+.urls a:hover{
+  background-color: white;
+  color: var(--clr-black);
+}
+#description{
+  text-align: center;
+}
+@media screen and (min-width: 890px){
+  .data-container .container{
+    flex-direction: row;
+  }
+  .character-image{
+    /* width: 100%; */
+    margin-right: 50px;
+  }
+}
+.more-details{
+  padding: 30px;
+}
+.more-details h2{
+  margin-bottom: 25px;
+}
+.comics-related{
+  list-style: none;
+}
+.comics-related li{
+  margin-bottom: 5px;
+}
+.more-details a{
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 5px;
+  color: black;
+  margin-bottom: 5px;
+}
+.more-details a:hover{
+  color: red;
+}
+@media screen and (min-width: 900px) {
+  .comics-related{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

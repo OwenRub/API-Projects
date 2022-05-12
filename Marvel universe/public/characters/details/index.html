@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Look for your favourite hero in the marvel universe, by Owen Rubio">
+  <meta name="keywords" content="marvel, comics, hero, avengers">
+  <meta name="author" content="Owen Rubio">
+  <!-- UNICONS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../../css/global.css">
+	<link rel="stylesheet" href="details.css">
+	<link rel="icon" type="image/png" href="../../assets/marvel-icon3.png" sizes="24x24">
+  <title></title>
+</head>
+<body>
+  <!-- NAVBAR -->
+	<header style="background-color: #000000;">
+	  <nav class="container">
+	  	<div class="nav-logo">
+	  	  <a href="../../"><img src="../../assets/marvel-icon2.png"></a>
+	  	  <i id="toggle-menu" class="uil uil-bars"></i>
+	  	</div>
+	  	<div id="menu-links" class="links">
+	  	  <ul>
+	  		<li><a href="../../characters/">Characters</a></li>
+	  		<li><a href="../../comics/">Comics</a></li>
+	  		<li><a href="../../news/">News</a></li>
+	  		<li><a href="../../search/" id="search-btn">Search</a></li>
+	  	  </ul>
+	  	</div>
+	  	<div class="nav-search">
+	  		<a href="../../search/"><i title="Search" class="uil uil-search"></i></a>
+	  	</div>
+	  </nav>
+	</header>
+	<!-- GO TOP BUTTON -->
+	<button class="hide-btn" id="go-top-btn"><i class="uil uil-arrow-up"></i></button>
+  <main>
+		<!-- TOP SECTION -->
+		<section class="data-container">
+			<div class="container">
+				<div class="character-image">
+					<img id="character-cover" src="">
+				</div>
+				<div class="character-data">
+					<h2 id="name"></h2>
+					<div class="published">
+						<strong>Modified</strong>
+						<p id="date"></p>
+					</div>
+					<p id="description"></p>
+					<div class="urls">
+						<a id="official-site" href="" target="_blank">OFFICIAL SITE</a>
+						<a id="wiki" href="" target="_blank">Wiki</a>
+						<a id="comics" href="" target="_blank">COMICS</a>
+					</div>
+				</div>
+			</div>
+		</section>
+			<!-- END TOP SECTION -->
+		<section id="more-details" class="more-details container">
+			<h2>Comics</h2>
+			<ul id="comic-related" class="comics-related">
+				
+			</ul>
+		</section>
+	</main>
+  <!-- FOOTER -->
+	<footer>
+		<div>
+			<img src="../../assets/marvel-icon2.png" alt="marvel icon">
+			<div>
+				<h4>FIND ME</h4>
+				<div class="media-links">
+					<a target="_blank" href="https://www.linkedin.com/in/owen-developer/"><i class="uil uil-linkedin"></i></a>
+					<a target="_blank" href="https://github.com/OwenRub"><i class="uil uil-github"></i></a>
+					<a target="_blank" href="https://www.facebook.com/owenjavier.rubiogarcia"><i class="uil uil-facebook"></i></a>
+					<a target="_blank" href="https://twitter.com/Owensitux"><i class="uil uil-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+		<p>This website is not for commercial purposes.</p>
+		<p>Data provided by <a href="marvel.com" hreflang="en">Marvel</a>. © 2014 Marvel.</p>
+	</footer>
+	<script src="../../js/utilities.js"></script>
+	<script src="details.js"></script>
+</body>
+</html>

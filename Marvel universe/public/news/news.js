@@ -1,42 +1,8 @@
-// SLIDER
-const slider = document.querySelector('.slider');
-const buttonNext = document.getElementById('right-arrow');
-const buttonPrevious = document.getElementById('left-arrow');
-
-buttonNext.addEventListener('click', goNext);
-buttonPrevious.addEventListener('click', goPrevious);
-
-const myInterval = setInterval(goNext, 3500);
-
-/* slider functions */
-function goNext(){
-  const firstSlide = document.querySelectorAll('.slide')[0];
-  slider.style.transition = 'all 500ms ease-in';
-  slider.style.marginLeft = '-200%';
-  setTimeout(() => {
-    slider.style.transition = 'none';
-    slider.insertAdjacentElement('beforeend', firstSlide);
-    slider.style.marginLeft = '-100%';
-  }, 500);
-}
-
-function goPrevious(){
-  const slideSections = document.querySelectorAll('.slide');
-  const lastSlide = slideSections[slideSections.length-1];
-  slider.style.transition = 'all 500ms ease-in';
-  slider.style.marginLeft = '0';
-  setTimeout(() => {
-    slider.style.transition = 'none';
-    slider.insertAdjacentElement('afterbegin', lastSlide);
-    slider.style.marginLeft = '-100%';
-  }, 500);
-}
-
 // NEWS CONTENT
 updateNews();
 async function updateNews(){
   try{
-    const newsResponse = await fetch(`v1/news/marvel`);
+    const newsResponse = await fetch(`../v1/news/marvel`);
     if(newsResponse.ok){
       const news = await newsResponse.json();
       addNewsToDocument(news.articles);
@@ -49,7 +15,7 @@ async function updateNews(){
 
 function addNewsToDocument(articles){
   const articlesContainer = document.getElementById('latest-container')
-  for(let i=0; i<4; i++){
+  for(let i=0; i<20; i++){
     articlesContainer.append(createArticle(articles[i]), document.createElement('hr'));
   }
 }
@@ -116,35 +82,3 @@ function getTimeAgo(dateString){
     return `${rounded} month${rounded > 1 ? 's' : ''} ago`;
   }
 }
-
-// TABS
-const tabButtons = document.getElementById('tab-buttons').children;
-
-[...tabButtons].forEach(button => button.addEventListener('click', handleButtonClick));
-
-function handleButtonClick(event){
-  const selectedBtn = event.target;
-
-  if(!(selectedBtn.className === 'selected')){
-    setButtonsClasses(selectedBtn);
-    setContentVisibility(selectedBtn.textContent)
-  }
-}
-
-function setButtonsClasses(button){
-  [...tabButtons].forEach(btn => {
-    btn.className = '';
-  });
-  button.className = 'selected';
-}
-
-function setContentVisibility(text){
-  const idFromButtonText = text.toLowerCase().split(' ').join('-');
-  const tabTarget = document.getElementById(idFromButtonText);
-
-  const tabsContent = document.getElementById('tab-content').children;
-  [...tabsContent].forEach(tab => tab.className = 'hide');
-  
-  tabTarget.className = 'tab';
-}
-

@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Look for your favourite charcter in the marvel universe">
-  <meta name="keywords" content="marvel, heroes, villains, list">
+  <meta name="description" content="Look for the latest news in the marvel universe">
+  <meta name="keywords" content="marvel, news, latest, avengers">
   <meta name="author" content="Owen Rubio">
 	<link rel="icon" type="image/png" href="../assets/marvel-icon3.png" sizes="24x24">
   <!-- UNICONS -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <!-- STYLES -->
   <link rel="stylesheet" href="../css/global.css">
-	<link rel="stylesheet" href="characters.css">
-  <title>Marvel Heroes & Villains</title>
+	<link rel="stylesheet" href="news.css">
+  <title>Marvel News</title>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -41,33 +41,30 @@
 		<!-- TOP BANNER -->
 		<section class="top-banner">
 			<div>
-				<h1>MARVEL CHARACTERS</h1>
+				<h1>MARVEL NEWS</h1>
 			</div>
 			<div>
-				<p>Marvel heroes and villains in one place</p>
+				<p>Stay updated about the marvel universe</p>
 			</div>
 		</section>
 		<!-- END TOP BANNER -->
-		<!-- CHARACTERS LIST -->
-		<section class="list-container container">
-			<h2>Marvel characters list</h2>
-			<input id="search-character" class="search-input" type="text" placeholder="Search a character...">
-			<div id="characters-container" class="characters-list">
-				<!-- <a href="#" class="character-card">
-					<img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/3dman442.jpg" alt="character">
-					<div class="character-title">
-						<p>3-D MAN</p>
+		<!-- LATEST NEWS -->
+		<section class="container latest">
+			<h2>Latest in Marvel</h2>
+			<div id="latest-container" class="latest-container">
+				<!-- <article>
+					<a href=""><img src="https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/6c5264601145824e13ae3e85ab0ff1dd.jpg"></a>
+					<div>
+						<p class="new-source">Lifehacker.com</p>
+						<a class="new-link" href=""><h3>Paramount keeps rebooting star trek</h3></a>
+						<p class="new-date">2022-06-22</p>
 					</div>
-				</a> -->
+				</article>
+				<hr> -->
 			</div>
 		</section>
-		<!-- <button id="see-more">See more</button> -->
-		<div id="buttons-container" class="buttons-container">
-			<button id="prev-page" class="pagination-btn" disabled></button>
-			<span id="pagination-index"></span>
-			<button id="next-page" class="pagination-btn"></button>
-		</div>
-		<!-- END CHARACTERS LIST -->
+		<!-- END LATEST NEWS -->
+		
   </main>
 	<!-- FOOTER -->
 	<footer>
@@ -87,6 +84,6 @@
 		<p>Data provided by <a href="marvel.com" hreflang="en">Marvel</a>. © 2014 Marvel.</p>
 	</footer>
 	<script src="../js/utilities.js"></script>
-	<script src="characters.js"></script>
+	<script src="news.js"></script>
 </body>
 </html>

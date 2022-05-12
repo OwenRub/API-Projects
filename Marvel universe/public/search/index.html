@@ -10,33 +10,59 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <!-- STYLES -->
   <link rel="stylesheet" href="../css/global.css">
-	<link rel="stylesheet" href="../css/characters.css">
-	<link rel="icon" type="image/png" href="assets/marvel-icon.png" sizes="24x24">
-  <title>Marvel universe</title>
+	<link rel="stylesheet" href="search.css">
+	<link rel="icon" type="image/png" href="../assets/marvel-icon3.png" sizes="24x24">
+  <title>Search Marvel Characters & Comics</title>
 </head>
 <body>
   <!-- NAVBAR -->
 	<header style="background-color: #000000;">
 	  <nav class="container">
 	  	<div class="nav-logo">
-	  	  <a href="../"><img src="../assets/marvel-icon.png"></a>
+	  	  <a href="../"><img src="../assets/marvel-icon2.png"></a>
 	  	  <i id="toggle-menu" class="uil uil-bars"></i>
 	  	</div>
 	  	<div id="menu-links" class="links">
 	  	  <ul>
 	  		<li><a href="../characters/">Characters</a></li>
 	  		<li><a href="../comics/">Comics</a></li>
-	  		<li><a href="../stories/">Stories</a></li>
-	  		<li><a href="../events/">Events</a></li>
+	  		<li><a href="../news/">News</a></li>
 	  		<li><a href="../search/" id="search-btn">Search</a></li>
 	  	  </ul>
 	  	</div>
 	  	<div class="nav-search">
-	  		<a href="../search/"><i class="uil uil-search"></i></a>
+	  		<a href="../search/"><i title="Search" class="uil uil-search"></i></a>
 	  	</div>
 	  </nav>
 	</header>
-  
-  
+	<!-- GO TOP BUTTON -->
+	<button class="hide-btn" id="go-top-btn"><i class="uil uil-arrow-up"></i></button>
+	<main>
+		<!-- SEARCH INPUT AND TABS -->
+		<div class="list-container container">
+
+			<input id="search-input" class="search-input" type="text" placeholder="Search...">
+
+			<div id="tab-buttons-container" class="tabs-container">
+				<button class="search-tab selected-tab">Characters</button>
+				<button class="search-tab">Comics</button>
+				<button class="search-tab">Articles</button>
+			</div>
+		</div>
+
+		<div id="search-results-container" class="list-container container">
+			<div id="characters" class="characters-list">
+
+			</div>
+			<div id="comics" class="comics-list hidden">
+
+			</div>
+			<div id="articles" class="latest-container hidden">
+
+			</div>
+		</div>
+	</main>
+	<script src="../js/utilities.js"></script>
+  <script src="search.js"></script>
 </body>
 </html>
