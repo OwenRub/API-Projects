@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/weather-icon.png">
+  <title>Weather app</title>
+</head>
+<body>
+  <section class="container main-content">
+    <div class="controls">
+      <p class="title">Your current location</p>
+      <div>
+        <div>
+          <p>Latitude</p>
+          <p id="lat"></p>
+        </div>
+        <div>
+          <p>Longitude</p>
+          <p id="lng"></p>
+        </div>
+      </div>
+      <button id="get-weather">Get weather here</button>
+    </div>
+    <div class="information">
+      <p class="title">Weather information</p>
+      <hr>
+      <div id="weather" class="weather">
+        <div>
+          <p id="description"></p>
+          <div class="temperature">
+            <img id="icon" src="" alt="icon"><span id="temp"></span>
+          </div>
+          <p class="description">Feels like: <span id="feel"></span> °C</p>
+          <p class="description">Max: <span id="max"></span> °C</p>
+          <p class="description">Min: <span id="min"></span> °C</p>
+        </div>
+        <div>
+          <p id="name"></p>
+          <p class="description">Pressure: <span id="pressure"></span> hPa</p>
+          <p class="description">Humidity: <span id="humidity"></span> %</p>
+          <p class="description">Wind speed: <span id="wind"></span> Kph</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>
